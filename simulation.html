@@ -1,0 +1,452 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MoneyChain | Simulation</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            Money<span>Chain</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="simulation.html">Simulation</a>
+        </nav>
+
+        <a href="dashboard.html" class="nav-button">
+            Dashboard
+        </a>
+
+    </header>
+
+
+    <!-- Main Simulation -->
+    <main class="simulation-page">
+
+        <!-- Page Header -->
+        <section class="simulation-header">
+
+            <div>
+                <p class="section-label">
+                    MONEYCHAIN SIMULATOR
+                </p>
+
+                <h1>
+                    Run a Simulation
+                </h1>
+
+                <p>
+                    Experiment with fictional participants and virtual
+                    currency to understand how the simulated system
+                    changes over multiple rounds.
+                </p>
+            </div>
+
+            <div class="simulation-status">
+                <span class="status-indicator"></span>
+                Simulation Ready
+            </div>
+
+        </section>
+
+
+        <!-- Warning -->
+        <div class="warning simulation-warning">
+
+            <strong>Educational Simulation</strong>
+
+            <p>
+                This simulator uses fictional participants and virtual
+                currency. No real money, investments, or financial
+                transactions are involved.
+            </p>
+
+        </div>
+
+
+        <!-- Controls -->
+        <section class="simulation-controls">
+
+            <div class="dashboard-card">
+
+                <p class="section-label">
+                    SIMULATION CONTROLS
+                </p>
+
+                <h2>
+                    Configure Round
+                </h2>
+
+
+                <div class="form-group">
+
+                    <label for="newParticipants">
+                        New Participants
+                    </label>
+
+                    <input
+                        type="number"
+                        id="newParticipants"
+                        min="0"
+                        value="10"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="virtualDeposit">
+                        Virtual Deposit Per Participant
+                    </label>
+
+                    <input
+                        type="number"
+                        id="virtualDeposit"
+                        min="0"
+                        value="100"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="payoutRate">
+                        Simulated Payout Rate (%)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="payoutRate"
+                        min="0"
+                        max="100"
+                        value="50"
+                    >
+
+                </div>
+
+
+                <div class="control-buttons">
+
+                    <button
+                        type="button"
+                        class="primary-button"
+                        id="runRound"
+                    >
+                        Run Round
+                    </button>
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        id="resetSimulation"
+                    >
+                        Reset
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Current Round -->
+            <div class="dashboard-card">
+
+                <p class="section-label">
+                    CURRENT ROUND
+                </p>
+
+                <h2 id="roundNumber">
+                    Round 0
+                </h2>
+
+                <div class="round-summary">
+
+                    <div>
+                        <span>Participants</span>
+                        <strong id="roundParticipants">
+                            0
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Deposits</span>
+                        <strong id="roundDeposits">
+                            $0
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Payouts</span>
+                        <strong id="roundPayouts">
+                            $0
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Virtual Balance</span>
+                        <strong id="roundBalance">
+                            $0
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <p>Total Participants</p>
+
+                <h2 id="totalParticipants">
+                    0
+                </h2>
+
+                <span>
+                    Fictional participants
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p>Total Deposits</p>
+
+                <h2 id="totalDeposits">
+                    $0
+                </h2>
+
+                <span>
+                    Virtual currency
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p>Total Payouts</p>
+
+                <h2 id="totalPayouts">
+                    $0
+                </h2>
+
+                <span>
+                    Simulated payouts
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p>Virtual Balance</p>
+
+                <h2 id="totalBalance">
+                    $0
+                </h2>
+
+                <span>
+                    Remaining simulated funds
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Simulation Activity -->
+        <section class="dashboard-card simulation-activity">
+
+            <div class="card-title">
+
+                <div>
+                    <p class="section-label">
+                        ACTIVITY LOG
+                    </p>
+
+                    <h2>
+                        Simulation Events
+                    </h2>
+                </div>
+
+                <span class="status">
+                    DEMO
+                </span>
+
+            </div>
+
+
+            <div id="activityLog" class="activity-list">
+
+                <div class="empty-state">
+
+                    <h3>
+                        No simulation rounds yet
+                    </h3>
+
+                    <p>
+                        Configure the controls above and run your
+                        first fictional simulation round.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Educational Explanation -->
+        <section class="how-it-works">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    LEARNING SECTION
+                </p>
+
+                <h2>
+                    What are you observing?
+                </h2>
+
+                <p>
+                    The purpose of MoneyChain is to help you understand
+                    the mathematics and dynamics behind a fictional
+                    unsustainable payment system.
+                </p>
+
+            </div>
+
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Participants Increase
+                    </h3>
+
+                    <p>
+                        More fictional participants can increase the
+                        amount of virtual funds entering the simulation.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Payouts Increase
+                    </h3>
+
+                    <p>
+                        The simulation tracks how virtual payouts compare
+                        with the amount entering the system.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Growth Stops
+                    </h3>
+
+                    <p>
+                        Experiment with fewer new participants and observe
+                        how the simulated balance changes.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Back To Dashboard -->
+        <section class="cta">
+
+            <h2>
+                Simulation Complete?
+            </h2>
+
+            <p>
+                View your overall simulation statistics on the dashboard.
+            </p>
+
+            <a
+                href="dashboard.html"
+                class="primary-button"
+            >
+                View Dashboard
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            Money<span>Chain</span>
+        </div>
+
+        <p>
+            Educational financial simulation project.
+        </p>
+
+        <p>
+            Fictional data only — no real money involved.
+        </p>
+
+        <p>
+            © 2026 MoneyChain
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/simulation.js"></script>
+
+</body>
+</html>

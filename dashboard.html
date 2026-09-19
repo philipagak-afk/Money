@@ -1,0 +1,431 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MoneyChain | Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            Money<span>Chain</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="simulation.html">Simulation</a>
+        </nav>
+
+        <a href="simulation.html" class="nav-button">
+            Start Simulation
+        </a>
+
+    </header>
+
+
+    <!-- Dashboard -->
+    <main class="dashboard">
+
+        <section class="dashboard-header">
+
+            <div>
+                <p class="section-label">SIMULATION DASHBOARD</p>
+
+                <h1>
+                    Simulation Overview
+                </h1>
+
+                <p>
+                    Monitor the activity and performance of the
+                    educational simulation using fictional data.
+                </p>
+            </div>
+
+            <a href="simulation.html" class="primary-button">
+                Run Simulation
+            </a>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <p>Total Participants</p>
+
+                <h2 id="totalParticipants">
+                    128
+                </h2>
+
+                <span>
+                    Fictional participants
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p>Virtual Deposits</p>
+
+                <h2 id="totalDeposits">
+                    $12,800
+                </h2>
+
+                <span>
+                    Simulated funds
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p>Virtual Payouts</p>
+
+                <h2 id="totalPayouts">
+                    $8,400
+                </h2>
+
+                <span>
+                    Simulated payouts
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p>Current Round</p>
+
+                <h2 id="currentRound">
+                    12
+                </h2>
+
+                <span>
+                    Simulation round
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Main Dashboard Content -->
+        <section class="dashboard-grid">
+
+            <!-- Activity -->
+            <div class="dashboard-card">
+
+                <div class="card-title">
+
+                    <div>
+                        <p class="section-label">
+                            RECENT ACTIVITY
+                        </p>
+
+                        <h2>
+                            Simulation Activity
+                        </h2>
+                    </div>
+
+                    <span class="status">
+                        ● DEMO
+                    </span>
+
+                </div>
+
+
+                <div class="activity-list">
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            +
+                        </div>
+
+                        <div>
+                            <strong>
+                                New participant added
+                            </strong>
+
+                            <p>
+                                Participant #128 joined the simulation.
+                            </p>
+                        </div>
+
+                        <span>
+                            Round 12
+                        </span>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            $
+                        </div>
+
+                        <div>
+                            <strong>
+                                Virtual deposit recorded
+                            </strong>
+
+                            <p>
+                                A fictional deposit was added.
+                            </p>
+                        </div>
+
+                        <span>
+                            Round 12
+                        </span>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            ↑
+                        </div>
+
+                        <div>
+                            <strong>
+                                Virtual payout recorded
+                            </strong>
+
+                            <p>
+                                A fictional payout was simulated.
+                            </p>
+                        </div>
+
+                        <span>
+                            Round 11
+                        </span>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            +
+                        </div>
+
+                        <div>
+                            <strong>
+                                New participant added
+                            </strong>
+
+                            <p>
+                                Participant #127 joined the simulation.
+                            </p>
+                        </div>
+
+                        <span>
+                            Round 11
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Simulation Status -->
+            <div class="dashboard-card">
+
+                <p class="section-label">
+                    SYSTEM STATUS
+                </p>
+
+                <h2>
+                    Simulation Health
+                </h2>
+
+
+                <div class="health-status">
+
+                    <div class="status-indicator"></div>
+
+                    <div>
+                        <strong>
+                            Simulation Active
+                        </strong>
+
+                        <p>
+                            The fictional simulation is currently running.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="health-stat">
+
+                    <div>
+                        <span>
+                            Participants
+                        </span>
+
+                        <strong>
+                            128
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>
+                            Deposits
+                        </span>
+
+                        <strong>
+                            $12,800
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>
+                            Payouts
+                        </span>
+
+                        <strong>
+                            $8,400
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="warning">
+
+                    Educational simulation only.
+                    No real money or financial accounts are involved.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+
+            <p class="section-label">
+                QUICK ACTIONS
+            </p>
+
+            <h2>
+                Manage Simulation
+            </h2>
+
+
+            <div class="action-grid">
+
+                <a href="simulation.html" class="action-card">
+
+                    <span class="action-icon">
+                        ▶
+                    </span>
+
+                    <div>
+                        <h3>
+                            Start Simulation
+                        </h3>
+
+                        <p>
+                            Run another simulation round.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <button class="action-card" id="resetSimulation">
+
+                    <span class="action-icon">
+                        ↻
+                    </span>
+
+                    <div>
+                        <h3>
+                            Reset Simulation
+                        </h3>
+
+                        <p>
+                            Reset the fictional simulation data.
+                        </p>
+
+                    </div>
+
+                </button>
+
+
+                <a href="index.html" class="action-card">
+
+                    <span class="action-icon">
+                        ←
+                    </span>
+
+                    <div>
+                        <h3>
+                            Back Home
+                        </h3>
+
+                        <p>
+                            Return to the MoneyChain homepage.
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            Money<span>Chain</span>
+        </div>
+
+        <p>
+            Educational financial simulation project.
+        </p>
+
+        <p>
+            Fictional data only — no real money involved.
+        </p>
+
+        <p>
+            © 2026 MoneyChain
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>
+
